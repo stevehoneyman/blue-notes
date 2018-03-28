@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Una Mass - Production</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+			/* ------------- fonts -------------- */
+
+			@font-face {
+			    font-family: 'Trade Gothic';
+			    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff2') format('woff2'),
+			        url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+
+			@font-face {
+			    font-family: 'Trade Gothic Bold';
+			    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-bold.woff2') format('woff2'),
+			        url('../fonts/trade-gothic-web/TradeGothicLTStd-bold.woff') format('woff');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+				
+			/* -------------- reset --------------- */
+
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				background-color: #ccc;
+			}
+
+			img {
+				max-width: 100%
+			}
+
+			/* ---------- layout ------------ */
+
+			
+			.wrapper {
+				width: 100%;
+		  		max-width: 600px;
+		  		margin: 1rem auto;
+		  		border: 5px solid #fff;
+		  	}
+			
+			.container{
+				position: relative;
+				height: 0;
+		  		padding-bottom: 100%;
+		  		background-color: #000;
+		  	}
+
+		  	/* ----------- type --------------- */
+
+		  	h1 {
+		  		position: absolute;
+		  		top: 41%;
+		  		right: 1%;
+				font-family: 'Trade Gothic Bold';
+		  		text-transform: uppercase;
+		  		letter-spacing: -0.065em;
+		  		line-height: 0.75;
+		  		color: #bd2659;
+		  		
+		  	}
+
+
+			img {
+				padding-top: 17%;
+			}
+
+			.band {
+				position: absolute;
+				top: 4%;
+				right: 0.75%;
+				font-family: 'Trade Gothic';
+				font-size: 6px;
+				font-weight: lighter;
+				text-align: right;
+				letter-spacing: 0.025em;
+				text-transform: uppercase;
+				
+				color: #e1a041;
+			}
+
+			.white {
+				color: #fff;
+			}
+
+			/* ------------ footer and logo -------- */
+
+			footer {
+				position: absolute;
+				top: 1.5%;
+				left: 21.25%;
+				width: 19%;
+				height: 6.3333%;
+				color: #e1a041;
+				opacity: 0.95;
+			}
+
+			.rectangle {
+				position: relative;
+				display: block;
+				width: 63.6363%;
+				height: 47.3684%; /* 18px / 38px */
+			/*	border: 1px solid #e1a041; */
+				background-color: #e1a041;
+				float: right;
+
+			}
+
+			.rectangle:after {
+				content: 'The Finest in Jazz';
+				position: absolute;
+				bottom: 0;
+				font-size: 2px;
+				color: #000;
+				padding-left: 2%;
+			}
+	
+			.elipse {
+				display: block;
+				width: 36.3636%;
+				height: 52.6315%; /* 20px / 38px */
+				margin-top: 15%; 
+				margin-right: 0.01%;
+				border-radius: 20px / 10px;
+			/*	border: 1px solid #e1a041; */
+				margin-bottom: 8px;
+				background-color: #e1a041;
+				float: left;
+			}
+
+			.elipse:after {
+				content: '';
+				padding: 2%;
+			}
+
+			.label {
+				padding-top: 3%;
+				padding-left: 1%;
+				font-family: 'Trade Gothic';
+				text-transform: uppercase;
+				font-size: 2px;
+			/*	letter-spacing: 0.3vw; */
+				font-weight: 400;
+				color: #e1a041;
+				float: left;
+			}
+
+			
+
+			/* ------------ media queries and locks --------- */
+
+			@media (min-width: 180px) {
+
+				h1 {
+					font-size: calc(0.1095 * 100vw + -1.71px);
+				}
+
+				.band {
+					font-size: calc(0.0357 * 100vw + -0.426px);
+				}
+
+				.label {
+				font-size: calc(0.0238 * 100vw + -2.28px);
+				}
+			
+				.rectangle:after {
+				font-size: calc(0.0166 * 100vw + -0.988px);
+				}
+			}
+
+
+			@media (min-width: 600px) {
+				
+				h1 {
+					font-size: 64px;
+				}
+
+				.una {
+		  			letter-spacing: -0.1em;
+		  		}
+
+		  		.mas {
+		  			letter-spacing: -0.095em;
+		  			line-height: 0.75;
+		  		}
+
+		  		.band {
+					font-size: 21px;
+				}
+
+				.label {
+					font-size: 12px;
+				}
+
+				.rectangle:after {
+					font-size: 9px;
+				}
+
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="container">
+				<img src="images/una-mas.jpg">
+				<h1><span class="una">U</span>na<br /> 
+					<span class="mas">Mas</span><br />
+				</h1>
+				
+				<p class="band"><span class="white">Kenny Dorham</span>/Joe Henderson<br />
+				Herbie Hancock/Butch Warren/Anthony Williams</p>
+
+				<footer class="logo">
+					<span class="rectangle"></span>
+					<span class="elipse"></span>
+					<span class="label">Blue Note</span>
+				</footer>
+
+			</div><!-- closes container div -->
+		</div><!-- closes wrapper div -->
+		
+	</body>
+</html>

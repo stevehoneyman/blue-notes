@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>The Cooker - Production</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+
+		<style>
+
+			/* ------------- fonts -------------- */
+
+			@font-face {
+    			font-family: 'bulletin';
+    			src: url('../fonts/bulletin_typewriter_mn_regular-webfont.woff2') format('woff2'),
+         			 url('../fonts/bulletin_typewriter_mn_regular-webfont.woff') format('woff');
+    			font-weight: normal;
+    			font-style: normal;
+			}
+
+			@font-face {
+			    font-family: 'Trade Gothic';
+			    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff2') format('woff2'),
+			        url('../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+				
+			/* -------------- reset --------------- */
+
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				font-size: 1vw;
+			}
+
+			body {
+				background-color: #ccc;
+			}
+
+			img {
+				max-width: 100%
+			}
+
+			/* ---------- layout  ------------ */
+
+			.wrapper {
+				width: 100%;
+		  		max-width: 600px;
+		  		margin: 1rem auto;
+		  		border: 5px solid #fff;
+		  		background-color: #1e0103;
+			}
+			
+			.container{
+				position: relative;
+				height: 0;
+		  		padding-bottom: 100%;
+		  		background-image: url('the-cooker.jpg');
+		  		background-size: cover;
+		  	}
+
+		  	header {
+		  		width: 39.3333%;
+		  		padding-top: 10.5%;
+				padding-left: 2.5%;
+			}
+
+			p {
+				font-family: 'bulletin', sans-serif;
+				color: white;
+				text-transform: uppercase;
+				line-height: 0.95;
+			}
+
+			.cooker {
+				margin-bottom: 0.25rem;
+				font-size: 4.66em;
+				letter-spacing: 0.107em;
+				text-align: left;
+			}
+
+			.morgan {
+				font-size: 9.35em;
+				letter-spacing: 0.0725em;
+				text-align: right;
+			}
+
+			/* ------------ footer and logo -------- */
+
+			footer {
+				position: absolute;
+				top: 35%;
+				left: 19.25%;
+				width: 19%;
+				height: 6.3333%;
+				color: #ad3a2d;
+				opacity: 0.95;
+			}
+
+			.rectangle {
+				position: relative;
+				display: block;
+				width: 63.6363%;
+				height: 47.3684%; /* 18px / 38px */
+			/*	border: 1px solid #ad3a2d; */
+				background-color: #c0392a;
+				float: right;
+			}
+
+			.rectangle:after {
+				content: 'The Finest in Jazz';
+				position: absolute;
+				bottom: 0;
+				font-size: 2px;
+				color: #000;
+				padding-left: 2%;
+			}
+	
+			.elipse {
+				display: block;
+				width: 36.3636%;
+				height: 52.6315%; /* 20px / 38px */
+				margin-top: 15%; 
+				margin-right: 0.01%;
+				border-radius: 20px / 10px;
+			/*	border: 1px solid #ad3a2d; */
+				background-color: #c0392a;
+				margin-bottom: 8px;
+				float: left;
+			}
+
+			.elipse:after {
+				content: '';
+				padding: 2%;
+			}
+
+			.label {
+				padding-top: 3%;
+				padding-left: 1%;
+				font-family: 'Trade Gothic';
+				text-transform: uppercase;
+				font-size: 2px;
+			/*	letter-spacing: 0.3vw; */
+				font-weight: 800;
+				color: #c0392a;
+				float: left;
+			}
+
+			
+			/* ------------ media queries and locks --------- */
+
+
+			@media (min-width: 180px) {
+			
+				.label {
+					font-size: calc(0.0238 * 100vw + -2.28px);
+				}
+				
+				.rectangle:after {
+					font-size: calc(0.0166 * 100vw + -0.988px);
+				}
+			}
+
+
+			@media (min-width: 600px) {
+				
+				.cooker {
+					font-size: 28px;
+					letter-spacing: 3px;
+				}
+
+				.morgan {
+					font-size: 56px;
+					letter-spacing: 4px;
+				}
+
+				.label {
+					font-size: 12px;
+				}
+
+				.rectangle:after {
+					font-size: 9px;
+				}
+				
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="container">
+				<header>
+					<h1 class="cooker">The cooker</h1>
+					<h2 class="morgan">Lee<br />Morgan</h2>
+				</header>
+				
+				<footer class="logo">
+					<span class="rectangle"></span>
+					<span class="elipse"></span>
+					<span class="label">Blue Note</span>
+				</footer>
+			</div><!-- closes container div -->
+		</div><!-- closes wrapper div -->
+		
+	</body>
+</html>

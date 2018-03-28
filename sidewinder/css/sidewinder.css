@@ -1,0 +1,105 @@
+/* -------- Mixins ---------- */
+/* ------- Variables ------- */
+/* -------- Fonts ---------- */
+@font-face {
+  font-family: 'league gothic';
+  src: url("../../fonts/leaguegothic-regular-webfont.woff2") format("woff2"), url("../../fonts/leaguegothic-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* ------------ Reset -------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1vw;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: #ccc;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 1rem auto;
+  border: 5px solid #fff;
+  background-color: white;
+}
+
+/* ------ typography ------*/
+.sidewinder {
+  font-family: 'helvetica';
+  font-size: 16em;
+  /* 21.5em; */
+  text-transform: uppercase;
+  line-height: 0.75em;
+  color: #262425;
+  text-align: center;
+}
+
+.joe,
+.barry,
+.bob,
+.billy {
+  display: inline-block;
+  margin-left: 1%;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 3.1em;
+  /* 3.3em; */
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 0.5em;
+  letter-spacing: 0.042em;
+  /* 0.019em; */
+  color: #777;
+}
+
+section p:nth-of-type(2) {
+  margin-left: 1%;
+}
+
+.lee {
+  padding-bottom: 33%;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 16.27em;
+  /* 16.9em; */
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 0.6;
+  letter-spacing: 0.023em;
+  /* 0.012em; */
+  color: #e66a65;
+  text-align: center;
+}
+
+/* ========== MEDIA QUERIES ============= */
+@media screen and (min-width: 600px) {
+  .sidewinder {
+    font-size: 128px;
+    line-height: 0.75em;
+  }
+
+  .joe,
+  .barry,
+  .bob,
+  .billy {
+    font-size: 18px;
+    letter-spacing: 0.064em;
+    line-height: 1.5em;
+  }
+
+  .lee {
+    font-size: 100px;
+  }
+}
+
+/*# sourceMappingURL=sidewinder.css.map */

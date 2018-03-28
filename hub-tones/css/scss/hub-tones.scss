@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'league gothic';
+    src: url('../../fonts/leaguegothic-regular-webfont.woff2') format('woff2'),
+         url('../../fonts/leaguegothic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Trade Gothic';
+	src: url('../../fonts/trade-gothic-web/TradeGothicLTStd-light.woff2') format('woff2'),
+		 url('../../fonts/trade-gothic-web/TradeGothicLTStd-light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+@font-face {
+        font-family: 'Trade Gothic Light';
+        src: url('../fonts/trade-gothic-web/TradeGothicLTStd-Light.woff') format('woff2'), 
+        	url('../fonts/trade-gothic-web/TradeGothicLTStd-Light.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+/* ---------------- reset -------------- */    
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* ---------------- structure ------------ */
+
+.wrapper {
+	width: 98%;
+	max-width: 600px;
+	margin: 3rem auto 0;
+
+	.container {
+		position: relative;
+		height: 0;
+		padding-bottom: 100%;
+		border: 1px solid #ccc;
+		background-image: url('../images/white-sleeve.gif');
+		background-size: cover;
+	}
+}
+
+.layout {
+	
+	padding: 1.6666% 2.5% 0; 
+
+	.vert-bar {
+		width: 9.3%;
+		margin-right: 2.0%;
+		margin-bottom: 5%;
+		height: 0;
+		padding-bottom: 77%;
+		background-color: black;
+		float: left;
+	}
+
+	.vert-bar:nth-of-type(6) {
+		position: relative;
+		height: 72.0001%;
+	   	margin-top: 10%;
+
+	   	img {
+	   		position: absolute;
+	   		bottom: 0;
+	   		max-width: 100%
+	   	}
+
+	}   	
+
+	.vert-bar:last-of-type {
+		margin-right: 0px;
+	}
+}
+
+/* ---------------- type ------------------*/
+
+	.freddie, .hubbard, .hub-tones {
+		font-family: 'Trade Gothic Light', sans-serif;
+		font-size: 11px;
+		font-weight: 200;
+		letter-spacing: -0.0325em;
+	}
+
+	.hub-tones {
+		line-height: 0.7em;
+		color: #000;
+	}
+
+	.freddie {
+		line-height: 0em;
+		color: #c11e20 /* #df0010 */;
+		margin-left: 56%;
+		clear: left;
+	}
+
+	.hubbard  {
+		line-height: 1.65em;
+		color: #c11e20 /* #df0010 */;
+		margin-left: 64%;
+	}
+
+	.band {
+		position: absolute;
+		top: 75%;
+		font-family: 'times new roman'; 
+		letter-spacing: 0.005em;
+	}
+
+	/* ----------- footer and logo ------------- */
+  	
+  	footer {
+			position: absolute;
+			bottom: 15%;
+			left: 35.25%;
+			width: 19%;
+			height: 6.3333%;
+			color: #000;
+		}
+
+		.rectangle {
+			position: relative;
+			display: block;
+			width: 63.6363%;
+			height: 47.3684%; /* 18px / 38px */
+			border: 1px solid #000;
+			float: right;
+		}
+
+		.rectangle:after {
+			content: 'The Finest in Jazz';
+			position: absolute;
+			bottom: 0;
+			font-size: 2px;
+			padding-left: 2%;
+		}
+
+		.elipse {
+			display: block;
+			width: 36.3636%;
+			height: 52.6315%; /* 20px / 38px */
+			margin-top: 15%; 
+			margin-right: 0.01%;
+			border-radius: 20px / 10px;
+			border: 1px solid #000;
+			margin-bottom: 8px;
+			float: left;
+		}
+
+		.elipse:after {
+			content: '';
+			padding: 2%;
+		}
+
+		.label {
+			padding-top: 3%;
+			padding-left: 1%;
+			font-family: 'Trade Gothic';
+			text-transform: uppercase;
+			font-size: 2px;
+		/*	letter-spacing: 0.3vw; */
+			font-weight: 400;
+			color: #000;
+			float: left;
+		}
+
+
+/* ------------- queries and loccks ----------- */
+
+
+@media (min-width: 180px) {
+
+	.freddie, .hubbard, .hub-tones {
+		font-size: calc(0.0642 * 100vw + -0.55px);
+	}
+
+	.band {
+		font-size: calc(0.0184 * 100vw + -0.062px);
+	}
+
+	.label {
+		font-size: calc(0.0238 * 100vw + -2.28px);
+	}
+			
+	.rectangle:after {
+		font-size: calc(0.0166 * 100vw + -0.988px);
+	}
+}
+
+
+@media (min-width: 600px) {
+
+	.hub-tones,
+	.freddie,
+	.hubbard {
+		font-size: 38px;
+	}
+
+	.layout .band {
+		font-size: 11px;
+	}
+
+	.label {
+		font-size: 12px;
+	}
+
+	.rectangle:after {
+		font-size: 9px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

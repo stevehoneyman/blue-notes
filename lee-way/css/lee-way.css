@@ -1,0 +1,59 @@
+/* ================ VARIABLES ==========*/
+/* -------- Fonts ---------- */
+@font-face {
+  font-family: 'trocchi';
+  src: url("../../fonts/trocchi-bold-webfont.woff2") format("woff2"), url("../../fonts/trocchi-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* ================= RESET ============ */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ============== Backgrounds ===========*/
+.wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  border: 5px solid #fff;
+}
+
+.wrapper .container {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  background: url("../images/sleeve.gif");
+  background-size: cover;
+}
+
+/* ================ TYPOGRAPHY ============= */
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  font-size: 8rem;
+  font-family: 'trocchi';
+  line-height: 0.65;
+  color: #fff;
+}
+
+p:first-of-type {
+  color: #fff;
+}
+
+/* ================== Image ================== */
+img {
+  position: absolute;
+  top: 35.2%;
+  left: 62.5%;
+  transform: rotate(8deg);
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=lee-way.css.map */

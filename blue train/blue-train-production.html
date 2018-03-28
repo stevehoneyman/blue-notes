@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Blue Train</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+		/* ------------- fonts -------------- */
+
+
+		@font-face {
+  			font-family: 'trocchi';
+  			src: url("../fonts/trocchi-bold-webfont.woff2") format("woff2"), url("../../fonts/trocchi-bold-webfont.woff") format("woff");
+  			font-weight: normal;
+  			font-style: normal;
+		}
+
+		@font-face {
+  			font-family: 'clarendon';
+  			src: url("../fonts/clarendon-web/ClarendonLTStd.woff2") format("woff2"), 
+  				 url("../../fonts/clarendon-web/ClarendonLTStd.woff") format("woff");
+  			font-weight: normal;
+  			font-style: normal;
+		}
+
+		@font-face {
+  			font-family: 'league gothic';
+  			src: url("../fonts/leaguegothic-regular-webfont.woff2") format("woff2"), 
+  				 url("../../fonts/leaguegothic-regular-webfont.woff") format("woff");
+  			font-weight: normal;
+  			font-style: normal;
+		}
+			
+		/* -------------- reset --------------- */
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		html {
+			font-size: 1vw;
+		}
+
+		/* ---------- universal styles ------------ */
+
+		body {
+			font-family: 'clarendon';
+			color: #fff;
+			background-color: #ccc;
+		}
+
+		.wrapper {
+			width: 100%;
+	  		max-width: 600px;
+	  		margin: 1rem auto;
+	  		border: 5px solid #fff;
+	  	}
+		
+		.container{
+		/*	display: flex;	*/
+			height: 0;
+			padding-top: 1%;
+	  		padding-bottom: 99%;
+	  		background: url('blue-train-base.jpg');
+	  		background-size: cover;
+		}
+
+		h1 {
+			margin-right: 1.25%;
+			font-size: 8.685em;
+			color: #a3e720;
+			text-align: right;
+		}
+
+		h2 {
+			margin-left: 1%;
+			text-transform: uppercase;
+			font-size: 4.35em;
+			color: #fbfbfb;
+			float: left;
+			line-height: 0.65;
+		}
+
+		h3 {
+			margin-right: 1.25%;
+			font-size: 4.35em;
+			float: right;
+			line-height: 0.65;
+			
+		}
+
+		/* ------------ media queries and locks --------- */
+
+		@media (min-width: 600px) {
+
+			h1 {
+				font-size: 52px;
+			}
+
+			h2 {
+				font-size: 26px;
+			}
+
+			h3 {
+				font-size: 26px;
+			}
+
+		}
+
+	</style>
+
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="container">
+				<h1>john coltrane</h1>
+				<h2>blue train</h2>
+				<h3>blue note 91271</h3>
+			</div><!-- closes container div -->
+		</div><!-- closes wrapper div -->
+		
+	</body>
+</html>
