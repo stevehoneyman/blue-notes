@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Art Blakey and the Jazz Messengers</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+
+			/* ------------- fonts -------------- */
+
+			@font-face {
+			    font-family: 'Trade Gothic LT Std';
+			    src: url('../fonts/trade-gothic-web/TradeGothicLTStd-Bold.woff2') format('woff2'),
+			        url('../fonts/trade-gothic-web/TradeGothicLTStd-Bold.woff') format('woff');
+			    font-weight: bold;
+			    font-style: normal;
+			}
+				
+			/* -------------- reset --------------- */
+
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				font-size: 1vw;
+			}
+
+
+			body {
+				background-color: #ccc;
+			}
+
+			/* ---------------- layout ------------ */
+
+
+			.wrapper {
+				width: 100%;
+		  		max-width: 600px;
+		  		margin: 1rem auto;
+		  		border: 5px solid #fff;
+		  		background-color: #353336;
+			}
+			
+			.container{
+				position: relative;
+				height: 0;
+		  		padding-bottom: 100%;
+		  		background-image: url(art-background.jpg); 
+		  		background-size: cover; 
+		  	}
+
+			.type {
+				padding-top: 5.8333%;
+		  		padding-right: 1.75%;
+			/*	text-align: center; */
+			}
+
+		  	h1 {
+		  		font-family: 'Trade Gothic LT Std';
+		  		text-align: right;
+		  		text-transform: uppercase;
+		  		line-height: 0.9;
+		  		font-size: 6.11rem; /* 36px; */
+		  		color: white;
+		  	}
+
+		  	.burnt-orange {
+		  		color: #ff462b;		  		
+		  	}
+
+		  	.light-purple {
+		  		color: #9a8f9f;
+		  	}
+
+		  	.line-1 {
+		  		line-height: 1.15;
+		  		letter-spacing: 0.065rem;
+		  	}
+
+		  	.line-2 {
+		  		letter-spacing: 0.125rem;
+		  	}
+
+		  	.line-3 {
+		  		line-height: 1.15;
+		  	}
+
+			.line-4 {
+		  		letter-spacing: 0.1rem;
+		  		line-height: .75;
+		  	}
+
+		  	.line-5 {
+		  		font-size: 5.35rem;
+		  		line-height: 0.5;
+		  	}
+
+		  	.line-6 {
+		  		font-size: 5.35rem;
+		  		line-height: 1;
+		  		letter-spacing: 0.095rem;
+		  	}
+
+		  	.line-7 {
+		  		font-size: 5.95rem;
+		  		line-height: .75;
+		  		letter-spacing: 0.1rem;
+		  	}
+
+	  		.line-8 {
+	  			font-size: 4.675rem;
+	  			line-height: 0.75em;
+	  		}
+
+	  		.line-9,
+	  		.line-10,
+	  		.line-11 {
+	  			font-size: 4.675rem;
+	  			line-height: 0.5;
+	  		}
+
+	  		
+		  
+			/* ------------ media queries and locks --------- */
+
+			@media (min-width: 600px) {
+				
+				h1 {
+					font-size: 36px
+				}
+
+				.line-5, 
+				.line-7,
+				.line-8,
+				.line-9,
+				.line-10 {
+					font-size: 38px;
+				}
+
+				.line-4 {
+					letter-spacing: 0.1rem;
+				}
+				
+				.line-5, 
+				.line-6 {
+					font-size: 32px;
+				}
+
+				.line-7 {
+					font-size: 35px;
+				}
+
+				.line-8 {
+					font-size: 28px;
+				}
+
+				.line-9, 
+				.line-10,
+				.line-11 {
+					font-size: 29px;
+				}
+
+			} /* ----------- end mq's -------- */
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="container">
+				<div class="type">	
+					<h1><span class="line-1">Art</span><br /> 
+						<span class="line-2">Blakey</span><br />
+						<span class="burnt-orange line-3">and</span><br />
+						<span class="burnt-orange line-4">the</span><br />
+						<span class="burnt-orange line-5">jazz</span></span><br />
+						<span class="burnt-orange line-6">mes</span><br />
+						<span class="burnt-orange line-7">sen</span><br />
+						<span class="burnt-orange line-8">gers</span><br />
+						<span class="light-purple line-9">Blue</span><br />
+						<span class="light-purple line-10">Note</span><br />
+						<span class="light-purple line-11">4003</span><br />
+					</h1>
+				</div>
+			</div>	
+		</div><!-- closes wrapper div -->
+		
+	</body>
+</html>
