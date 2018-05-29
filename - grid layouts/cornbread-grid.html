@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Cornbread-grid</title>
+
+	<style>
+	
+		@font-face {
+    		font-family: 'Trade Gothic';
+    		src: url('fonts/trade-gothic-web/TradeGothicLTStd-Light.woff2') format('woff2');
+        }	
+
+		@font-face {
+			font-family: 'League Gothic';
+		    src: url('fonts/leaguegothic-regular-webfont.woff2') format('woff2');
+		}
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			padding: 2rem;
+		}
+
+		html {
+			font-size: 1vw;
+		}		
+
+		img {
+			max-width: 100%;
+		}
+
+		/* --------------- layout ----------------- */
+
+		.sleeve {
+			max-width: 600px;
+			max-height: 600px;
+			margin: 0 auto;
+			
+			display: grid;
+			grid-template-columns: 14.583% 14.583% 41.666% 14.583% 14.583%;
+			grid-template-rows: repeat(7, 1fr)
+			
+		}
+
+		.band {
+			grid-column: 2 / 5;
+			grid-row: 1 / 2; 
+			align-self: end;
+			padding-left: 1.75%;
+			letter-spacing: -0.15px;
+			opacity: 0.9;
+			z-index: 50;
+		} 
+
+		.cornbread-top {
+			grid-column: 2 /3;
+			grid-row: 2 / 3;
+			z-index: 10;
+			align-self: start;
+			padding-top: 0; 
+			z-index: 30;
+		}
+
+		.cornbread-right {
+			grid-column: 4 / 5;
+			grid-row: 2 / 7;
+			align-self: start;
+			padding: 0 0 0 7%;
+			z-index: 30;
+		}
+
+		.cornbread-bottom {
+			grid-column: 5 / 3;
+			grid-row: 6 / 7;
+			padding-top: 1.5%;
+		/*	justify-self: start; */
+		 	z-index: 30;
+		}
+
+		.cornbread-left {
+			grid-column: 2 / 3;
+			grid-row: 3 / 7;
+  			align-self: start;  
+  			z-index: 30;
+  		}
+
+  		.lm-image {
+  			display: block;
+			grid-column: 3 / 4;
+			grid-row: 3 / 6;
+		/*	mix-blend-mode: multiply; */
+			opacity: .9;
+			z-index: 20;
+		}
+
+  		.red-back {
+  			grid-column: 1 / 8;
+  			grid-row: 1 / 8;
+  		/*	opacity: .9; */
+  			z-index: 10;
+  		}
+
+		/* ----------------- typography ------------- */
+
+		p {
+			font-family: 'trade gothic';
+			text-transform: uppercase;
+			font-size: 2.95rem;
+			font-weight: 400;
+		}
+
+		p span {
+				color: white;
+			}
+
+		.lee-morgan {
+			font-weight: bold;
+			opacity: 0.95;
+		}	
+
+		h1 {
+			font-family: league gothic;
+			font-size: 17.2em;
+			color: #1d1d1d;
+		/*	letter-spacing: -0.02em; */ 
+			letter-spacing: 0;
+			line-height: 0.7599;
+			text-transform: uppercase;
+			
+			mix-blend-mode: normal;
+			opacity: 0.85; 
+		}
+
+		.cornbread-top h1 {
+			padding-top: 5%; 
+		}
+
+		.cornbread-right h1 {
+			writing-mode: vertical-lr;
+			line-height: 0.8;
+		}
+
+		.cornbread-bottom h1 {
+			transform: rotate(180deg);
+		}	
+
+		.cornbread-left h1 {
+			writing-mode: vertical-lr;
+			transform: rotate(180deg);
+		}
+
+		footer {
+			grid-column: 4 / 5; 
+			grid-row: 7 / 8;
+			margin-top: 11%;
+			opacity: 0.95;
+			z-index: 100;
+		}
+
+		/* --------------- logo ---------------- */
+
+		.rectangle {
+			position: relative;
+			display: block;
+			width: 63.6363%;
+			height: 17.368%; /* 18px / 38px */
+			border: 1px solid #000;
+			float: right;
+			opacity: 0.9;
+		}
+
+		.rectangle:after {
+			content: 'The Finest in Jazz';
+			position: absolute;
+			bottom: 0;
+			font-size: 1.1em;
+			padding-left: 2%;
+		}
+
+		.elipse {
+		/*	display: block; */
+			width: 36.3636%;
+			height: 21%; /* 20px / 38px */
+			margin-top: 15%; 
+			margin-right: 0.01%;
+			border-radius: 20px / 10px;
+			border: 1px solid #000;
+			margin-bottom: 8px;
+			float: left;
+			opacity: 0.9;
+		}
+
+		.elipse:after {
+			content: '';
+			padding: 2%;
+		}
+
+		.label {
+			padding-top: 3%;
+		/*	padding-left: 5%; */
+			font-family: 'Trade Gothic';
+			text-transform: uppercase;
+			font-size: 1.52em;
+		/*	letter-spacing: 0.3vw; */
+			font-weight: 600;
+			color: #000;
+			float: left;
+			opacity: 0.9;
+		}
+
+  		/* -------------- media queries -------- */
+
+  /*
+		@media (min-width: 180px) {
+			
+			.label {
+				font-size: calc(0.0238 * 100vw + -2.28px);
+			}
+			
+			.rectangle:after {
+				font-size: calc(0.0166 * 100vw + -0.988px);
+			}
+		}
+*/
+		@media (min-width: 600px) {
+			
+			.label {
+				font-size: 9px;
+			}
+
+			.rectangle:after {
+				font-size: 7px;
+			}
+		
+			h1 {
+  				font-size: 106px;
+  				line-height: 0.8;
+			}
+
+		
+			.band {
+				padding-left: 1.5%;
+			}
+
+			p  {
+				font-size: 16px;
+				font-weight: 400;
+				letter-spacing: 0.025em;
+				padding-left: 0.5%;
+				line-height: 17px;
+			}
+
+			.cornbread-right {
+				padding: 2% 0 0 5%;
+			}
+		
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<div class="sleeve">
+	
+		<div class="red-back"><img src="images/red-worn-3.jpg"></div>
+		
+		<div class="lm-image"><img src="images/lee.jpg" alt="photo of Blue Note legend Lee Morgan"></div>
+		
+		<div class="band">
+			<p><span class="lee-morgan">Lee Morgan</span> / Jackie McLean / Hank Mobley /</p>
+			<p>Herbie Hancock / Larry Ridley / Billy Higgins</p> 
+		</div>
+
+		<div class="cornbread-top"><h1>Cornbread</h1></div>
+		<div class="cornbread-right"><h1>Cornbread</h1></div>
+		<div class="cornbread-bottom"><h1>Cornbread</h1></div>
+		<div class="cornbread-left"><h1>Cornbread</h1></div>
+
+		
+
+		<footer class="logo">
+			<span class="rectangle"></span>
+			<span class="elipse"></span>
+			<span class="label">Blue Note</span>
+		</footer>
+	</div>
+	
+</body>
+</html>
