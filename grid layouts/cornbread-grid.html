@@ -19,53 +19,58 @@
 		    src: url('fonts/leaguegothic-regular-webfont.woff2') format('woff2');
 		}
 
+		/* ================== RESET ======================= */ 
+
 		* {
 			padding: 0;
 			margin: 0;
 			box-sizing: border-box;
 		}
 
-		body {
-			padding-top: 3rem;
-		}
-		
 		html {
 			font-size: 1vw;	
 		}
 
+		body {
+			padding-top: 3rem;
+		}
+		
 		img {
 			display: block;
 			max-width: 100%;
 		}
 
+		ul {
+			display: inline;
+			list-style-type: none;
+		}
+
 		.group:after {
-  			content: "";
+  			content: " ";
   			display: table;
   			clear: both;
 		}
 
-		.container {
-			max-width: 600px;
-			margin: 0 auto;
+		/* ==================== LAYOUT ==================== */
 
+		.container {
 			display: grid;
 			grid-template-columns: 15.9% 12.5% 0.75% 41.66% 1% 12.5% 15.6%;
 			grid-template-rows: 13.16rem 13.33rem 0.15rem 41.66rem 0.75rem 13.33rem 17.5rem;
+
+			max-width: 600px;
+			margin: 0 auto;
 		} 
 
-		.band {
+		section {
 			grid-column:  2 / 7;
 			grid-row:  1 / 2;
-			z-index: 30;
-
+			
 			align-self: end;
+			padding-left: 0.5%;
 			margin-bottom: 4px;
-		}
-
-		.background {
-			grid-column: 1 / 8;
-			grid-row: 1 / 8;
-			z-index: 0;
+			
+			z-index: 30;
 		}
 
 		.lee {
@@ -75,16 +80,79 @@
 			mix-blend-mode: hard-light;
 			opacity: 0.95;
 			z-index: 10;
-
 		}
 
-		/* ---------- typography ---------- */
+		/* ============ TYPOGRAPHY ================= */
 
-		.band {
-			padding-left: 0.5%;
+		h1 {
+			grid-column: 2 / 7;
+			grid-row: 2 / 7;
+			
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr;
+
+			font-family: league gothic;
+			font-size: 18.325em;
+			font-weight: 900;
+			text-transform: uppercase;
+			line-height: .75;
+			letter-spacing: -0.025em; 
+			color: #1f1919;
+			mix-blend-mode: normal;
+			
+			font-weight: normal;
+    		font-style: normal;
+		
+    		z-index: 20;
 		}
 
-		.band p {
+
+		/* ---------- cornbread lettering ------- */
+
+		h1 .top {
+			grid-column: 1 / 5;
+			grid-row: 1 / 1;
+			
+			margin-top: 1px;
+			margin-left: -3px;
+			z-index: 100;
+		}
+
+
+		h1 .right {
+			grid-column: 4 / 5;
+			grid-row: 1 / 4;
+
+			writing-mode: vertical-lr;
+			justify-self: right;
+
+			margin-top: -4px; 
+		}
+
+		h1 .bottom {
+			grid-column: 5 / 2;
+			grid-row: 6 / 7;
+
+			transform: rotate(180deg);
+			align-self: start;
+			justify-self: end; 
+			margin-right: -2px;
+		}
+
+		h1 .left {
+			grid-column: 1 / 2;
+			grid-row: 7 / 2;
+
+			writing-mode: vertical-lr;
+			justify-self: baseline;
+			transform: rotate(180deg);
+
+			margin-bottom: -5px;
+		}
+
+		h2, li {
+			display: inline;
 			font-family: 'Trade Gothic';
 			font-size: 2.8em;
 			text-transform: uppercase;
@@ -93,70 +161,19 @@
 			color: #332727;
 		}
 
-		.band p:last-of-type {
+		h2 {
+			color: #fff;
+		}
+		
+
+		li:last-of-type {
 			letter-spacing: -0.0025em;
 		}
 
-		.top, 
-		.right,
-		.bottom,
-		.left {
-			font-family: league gothic;
-			font-size: 17.35em;
-			font-weight: 900;
-			text-transform: uppercase;
-			line-height: .75;
-			letter-spacing: -0.025em; 
-			color: #1f1919;
-			z-index: 20;
-			mix-blend-mode: normal;
-		}
-
-		.top {
-			grid-column: 2 / 5;
-			grid-row: 2 / 3;
-			
-			align-self: end;
-			justify-self: center;
-		}
-
-		.right {
-			grid-column: 6 / 7;
-			grid-row: 2 / 6;
-
-			writing-mode: vertical-lr;
-			justify-self: right;
-
-			margin-top: -0.35rem; 
-		}
-
-		.bottom {
-			grid-column: 7 / 4;
-			grid-row: 6 / 7;
-
-			transform: rotate(180deg);
-			align-self: start;
-			justify-self: center; 
-		}
-
-		.left {
-			grid-column: 2 / 3;
-			grid-row: 7 / 4;
-
-			writing-mode: vertical-lr;
-			justify-self: baseline;
-			transform: rotate(180deg);
-
-			margin-bottom: -0.35rem;
-		}
-
+	
 		/* ------------ effects ----------- */
 
-		.lee-white {
-			color: #fff;
-		}
-
-		.blend {
+		.sleeve {
 			grid-column: 1 / 8;
 			grid-row: 1 / 8;
 			mix-blend-mode: normal; 
@@ -177,13 +194,11 @@
 			position: relative;
 			display: block;
 			margin-right: 1%;
-		/*	width: 63.6363%; */
 			width: 100%;
-			height: 24%; /* 18px / 38px */
+			height: 24%; 
 			border: 0.15em solid #332727;
 			float: right;
 			padding-left: 5%;
-		/*	opacity: 1; */
 		}
 
 		.rectangle:after {
@@ -196,10 +211,8 @@
 		}
 
 		.elipse {
-		/*	display: block; */
-		/*	width: 43%; */
 			width: 65%;
-			height: 25%; /* 20px / 38px */
+			height: 25%; 
 			margin-top: 0; 
 			margin-right: 96%;
 			border-radius: 24px / 12px;
@@ -213,23 +226,17 @@
 			padding: 2%;
 		}
 
-
-
 		.label {
 			padding-top: 0;
 			padding-left: 5%; 
 			font-family: 'Trade Gothic';
 			text-transform: uppercase;
 			font-size: 2.19em;
-		/*	letter-spacing: 0.3vw; */
 			font-weight: 400;
 			color: #000;
 			float: left;
 			margin-top: -2.25em; 
-		/*	opacity: 0.9; */
 		}
-
-			
 
 		/* ------- media queries and locks ----- */
 
@@ -243,19 +250,11 @@
 			.right,
 			.bottom,
 			.left {	
-				font-size: 104.5px
+				font-size: 109.65px;
+				letter-spacing: -2.75px;
 			}
 
-			.right { 
-				margin-top: -2.5px;
-			}
-
-			.left {
-			    margin-bottom: -2.5px; 
-			}
-
-			.band p {
-			/*	font-size: 16.9167px; */
+			section h2, li {
 				font-size: 17px;
 			}
 
@@ -267,7 +266,6 @@
 				font-size: 9px;
 			}
 
-
 	</style>
 
 </head>
@@ -275,20 +273,28 @@
 <body>
 	<div class="container">
 
-		<div class="top">Cornbread</div>
-		<div class="right">Cornbread</div>
-		<div class="bottom">Cornbread</div>
-		<div class="left">Cornbread</div>
+		<img src="images/cornbread-filtered-2.png" class="sleeve" alt="worn faded red album sleeve">
+		<img src="images/lee-4.jpg" class="lee" alt="lee morgan holding a trumpet">
+		
+		<h1 aria-label="Cornbread">
+			<span class="top" aria-hidden="true">Cornbread</span>
+			<span class="right" aria-hidden="true">Cornbread</span>
+			<span class="bottom" aria-hidden="true">Cornbread</span>
+			<span class="left" aria-hidden="true">Cornbread</span>
+		</h1>	
+	
+		<section aria-label="list of band members">
+			<h2>Lee Morgan</h2>
+			<ul> 
+				<li>/ Jackie McLean</li> 
+				<li>/ Hank Mobley / </li>
+				<li>Herbie Hancock / </li> 
+				<li>Larry Ridley / </li> 
+				<li>Billy Higgins</li>
+			</ul> 
+		</section>
 
-		<div class="band">
-			<p><span class="lee-white">Lee Morgan</span> / Jackie McLean / Hank Mobley / </p>
-			<p>Herbie Hancock / Larry Ridley / Billy Higgins</p> 
-		</div>
-
-		<img src="images/lee-4.jpg" class="lee">
-		<img src="images/cornbread-filtered-2.png" class="blend">
-
-		<footer class="logo group">
+		<footer class="logo group" aria-label="blue note logo">
 			<span class="rectangle"></span>
 			<span class="elipse"></span>
 			<span class="label">Blue Note</span>
